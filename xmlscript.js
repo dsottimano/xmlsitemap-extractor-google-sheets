@@ -1,3 +1,12 @@
+/* ---------------------------------------------------------------------------
+* Sitemap extractor (Google sheets)
+*
+* @desc    Extracts urls from XML sitemap index or sitemap files
+* @author  Dave Sottimano @dsottimano Twitter
+* @license MIT (http://www.opensource.org/licenses/mit-license.php)
+* @version 1.0
+* -------------------------------------------------------------------------*/
+
 /**
 * Returns URLs in sitemap.xml file
 *
