@@ -1,11 +1,8 @@
 ## Functions
 
 <dl>
-<dt><a href="#sitemap">sitemap(sitemapUrl, namespace)</a> ⇒</dt>
-<dd><p>Returns URLs in sitemap.xml file</p>
-</dd>
-<dt><a href="#sitemapIndex">sitemapIndex(sitemapIndexUrl, namespace)</a> ⇒</dt>
-<dd><p>Returns URLs in sitemap index file</p>
+<dt><a href="#sitemap">sitemap(sitemapUrl)</a> ⇒</dt>
+<dd><p>Returns URLs in sitemap.xml index or xml file</p>
 </dd>
 </dl>
 
@@ -21,7 +18,6 @@ Returns URLs in sitemap.xml file
 | Param | Type | Description |
 | --- | --- | --- |
 | sitemapUrl | <code>&quot;https://www.google.com/gmail/sitemap.xml&quot;</code> | REQUIRED The url of the sitemap |
-| namespace | <code>&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;</code> | REQUIRED Look at the source of the xml sitemap, look for the xmlns value |
 
 <a name="sitemapIndex"></a>
 
