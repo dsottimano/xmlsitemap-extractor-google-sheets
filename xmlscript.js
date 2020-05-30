@@ -18,14 +18,13 @@
 function EXTRACT_SITEMAP(sitemapUrl) {
   try {
 
-    var xml = UrlFetchApp.fetch(sitemapUrl).getContentText();
-    var document = XmlService.parse(xml);
+    var xml = UrlFetchApp.fetch(sitemapUrl,{muteHttpExceptions:true});
+    if(xml.getResponseCode() != 200) throw "The sitemapUrl did not return a 200 response code";
+    var document = XmlService.parse(xml.getContentText());
     var root = document.getRootElement()
     var namespace = root.getNamespace().getURI()
     var sitemapNameSpace = XmlService.getNamespace(namespace);
-    
     let urls = root.getChildren('url',sitemapNameSpace)[0] ? root.getChildren('url', sitemapNameSpace) : root.getChildren('sitemap', sitemapNameSpace);
-     
     var locs = []
     
     for (var i=0;i <urls.length;i++) {
@@ -35,6 +34,7 @@ function EXTRACT_SITEMAP(sitemapUrl) {
     return locs  
   } catch (e) {
     console.log(e)
+    if (e.toString().includes("The markup in the document preceding the root element must be well-formed")) return "Parsing error: is this a valid XML sitemap?";
     return e.toString() 
   }
 }
