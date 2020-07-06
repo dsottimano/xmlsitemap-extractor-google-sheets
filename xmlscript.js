@@ -19,7 +19,6 @@ function EXTRACT_SITEMAP(sitemapUrl) {
   try {
 
     var xml = UrlFetchApp.fetch(sitemapUrl,{muteHttpExceptions:true});
-    if(xml.getResponseCode() != 200) throw "The sitemapUrl did not return a 200 response code";
     var document = XmlService.parse(xml.getContentText());
     var root = document.getRootElement()
     var namespace = root.getNamespace().getURI()
