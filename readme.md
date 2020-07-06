@@ -1,14 +1,14 @@
 ## Functions
 
 <dl>
-<dt><a href="#sitemap">sitemap(sitemapUrl)</a> ⇒</dt>
+<dt><a href="#sitemap">EXTRACT_SITEMAP(sitemapUrl)</a> ⇒</dt>
 <dd><p>Returns URLs in sitemap.xml index or xml file</p>
 </dd>
 </dl>
 
 <a name="sitemap"></a>
 
-## sitemap(sitemapUrl) ⇒
+## EXTRACT_SITEMAP(sitemapUrl) ⇒
 Returns URLs in sitemap.xml file
 
 **Kind**: global function
